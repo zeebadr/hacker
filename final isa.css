@@ -1,0 +1,193 @@
+/* Reset and Base Styles */
+body {
+    font-family: 'Courier New', monospace;
+    background: #121212;
+    color: #9550b1;
+    margin: 0;
+    padding: 20px;
+
+  /* Fallback dark color if image fails to load */
+  background: #121212;
+  
+  /* Background image with dark overlay */
+  background-image: 
+     linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.95)),
+    url('https://img.freepik.com/premium-photo/matrix-code-digital-rain-background-falling-purple-characters-verical-lines-computer-screen_771335-71718.jpg');
+  
+  /* Perfect positioning */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+  /* Improves text readability to reduce eye diseases */
+  color: #751da1;
+  text-shadow: 0 0 5px rgba(204, 0, 255, 0.3);
+}
+
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "intro intro"
+        "info info"
+        "credentials skills";
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Shared Window Styles */
+.window {
+    background: rgba(158, 150, 150, 0.089);
+    border: 1px solid #441b57;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.header {
+  border-bottom: 1px solid var(--matrix-green); /* Green line under title */
+  padding: 20px;
+  text-align: center;
+}
+
+.typing {
+  display: inline-block;
+  font-size: 2.5rem;
+  overflow: hidden;
+  border-right: 3px solid #af0bf0; /* This creates the cursor */
+  white-space: nowrap;
+  animation: 
+    typing 7s steps(40, end),
+    blink-caret 0.75s step-end infinite;
+}
+
+/* Typing effect */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Cursor blink */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(); }
+}
+
+.intro-dotted {
+  background: rgba(158, 150, 150, 0.089);
+  padding: 30px;
+  margin: 20px;
+  border: 1px dotted #441b57; /* Changed to dotted and used direct color */
+  position: relative;
+}
+
+.intro-dotted::after {
+  content: "ACCESS GRANTED"; /* يتم التهكير */
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #441b57;
+  font-size: 0.8rem;
+}
+
+.intro-dotted::after {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: var(--matrix-green);
+  font-size: 0.8rem;
+}
+
+/* Window 2: Basic Info (Landscape) */
+.info {
+    grid-area: info;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.info img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #a5a5a5;
+}
+/* Glow effect for portrait windows GAMDA GEDANN*/
+.credentials:hover, 
+.skills:hover {
+  box-shadow: 0 0 15px #441b57;
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+/* Add transition for smooth effect */
+.window {
+  transition: all 0.3s ease; /* Add this line to existing .window class */
+  /* Keep all your other existing .window styles lama el talyees */
+}
+/* Windows 3 & 4 (Portrait) */
+.credentials {
+    grid-area: credentials;
+}
+
+.skills {
+    grid-area: skills;
+}
+
+/* Terminal Text Styles */
+.terminal-text {
+    text-align: center;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    font-family: 'Courier New', monospace;
+    background: rgba(179, 173, 173, 0.116); /* Dark semi-transparent background */
+}
+
+.terminal-text p {
+    margin: 10px 0;
+    color: #a5a5a5; 
+}
+
+/* Contact Icons */
+.contact-icons {
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px;
+}
+
+.icon {
+    color: #a5a5a5;
+    font-size: 2rem;
+    margin: 0 15px;
+    transition: all 0.3s;
+}
+
+.icon:hover {
+    color: #9550b1;
+    transform: translateY(-3px);
+}
+
+/* Window Styling */
+.window {
+    background: rgba(180, 176, 176, 0.158);
+    border: 1px solid #9550b1;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Courier New', monospace;
+    color: #a5a5a5;
+    background: 
+        url('https://img.freepik.com/premium-photo/matrix-code-digital-rain-background-falling-purple-characters-verical-lines-computer-screen_771335-71718.jpg') center/cover fixed;
+    margin: 0;
+/* Profile Image */
+.info img {
+    border: 2px solid #9550b1;
+}
+    padding: 20px;
+}
+
